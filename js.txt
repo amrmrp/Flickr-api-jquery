@@ -1,0 +1,564 @@
+
+//====================================
+
+/*function fire(bool) {
+
+    var foo;
+    
+    if(bool){
+      let  foo = 'bar';
+
+      console.log(foo);
+
+    }else{
+      console.log(foo);
+    }
+    
+  }
+  
+  fire(true);
+*/
+
+//==========================================
+
+/*const names=['ali','search'];
+
+//names=['mahdi','amir'];     out ..... errore
+names.push('maziyar');
+
+console.log(names);*/
+
+//==========================================
+/*
+    class TaskCollection{
+
+      constructor(tasks=[]){
+
+        this.tasks=tasks;
+      }
+
+    //  =>   :  mean = function 
+        log(params) {
+          this.tasks.forEach( (task) =>  
+                                                  //   ==
+                                               // this.tasks.forEach(function (task) {
+                                                  //      console.log(task);
+                                                  //    });
+                                                 //
+          
+           console.log(task));
+        }
+    }
+class task{
+
+}
+    new TaskCollection([
+      new task , new task , new task
+    ]).log();
+
+
+*/
+//=================================================
+
+/*
+function applydiscount(cost ,discount=.10) {
+  
+  return cost - (cost * discount);
+
+}
+
+console.log(applydiscount(100, .40))
+
+*/
+//================================================
+
+/*
+function sum(x,y,z){
+  return x+y+z;
+}
+
+console.log(sum(1,1,2));
+
+*/
+
+//===2
+/*
+ let sum=(...numbers)=> {
+return numbers.reduce((pref,current)=>
+ pref +current
+);
+
+}
+console.log(sum(1,1,2));
+*/
+//===3
+/*
+let sum=(x,y)=> {
+  
+  return  x+y;
+  }
+  let nums=[1,2,3];
+  console.log(sum(...nums));
+
+*/
+
+/*
+let name='amir';
+let template='<div class="alert"><p>'+name+'</p></div>';
+
+console.log(template);
+
+*/
+    //object
+    /*
+        function getPersom(){
+
+          let name='amir';
+          let age=30;
+
+          return{
+
+            name:name,
+            age: age
+
+          };
+
+        }
+          console.log(getPersom().name);
+          console.log(getPersom().age);*/
+//2===
+
+ /*
+        function getPersom(){
+
+          let name='amir';
+          let age=30;
+
+          return{
+
+            name,
+            age,
+            greet: function(){
+              return 'salam' + this.name
+            }
+
+          };
+
+        }
+          console.log(getPersom().name);
+          console.log(getPersom().age);
+          console.log(getPersom().greet());
+
+*/
+
+//===3
+
+/*
+function getPersom(){
+
+  let name='amir';
+  let age=30;
+
+  return{
+
+    name,
+    age,
+    greet(){
+      return ` salam  ${this.name} `
+    }
+
+  };
+
+}
+  console.log(getPersom().name);
+  console.log(getPersom().age);
+  console.log(getPersom().greet());
+
+  class amir{
+     example (params) {
+      
+    }
+  }
+
+*/
+
+/*
+            let person={
+              name:'amir',
+              age:30
+            }
+            let {name,age}=person;
+              console.log(name);
+*/
+
+//  AJAX example
+/*
+function getdata({result,count}){
+
+console.log(result,count);
+}
+getdata({
+  name:'amir',
+  age:30,
+  result:['foo','bar'],
+  count:25,
+});
+
+*/
+
+// object
+/*
+function user(username,email){
+  this.username= username;
+  this.email=email;
+}
+
+user.prototype.changeemail= function(newemail){
+  this.email=newemail;
+}
+
+var user =new user('amirreza' , 'amirreza@gmail.com');
+
+user.changeemail('amir@gmail.com');
+
+console.dir(user);
+*/
+
+//===2
+/*
+class User{
+
+        constructor(username,email){
+          this.username=username;
+          this.email=email;
+        }
+          changeemail(newemail){
+            this.email=newemail;
+          }
+          
+}
+    let user =new User('amir','info@gmail.com');
+    user.changeemail('amir@gmail.com');
+    console.dir(user);
+
+*/
+
+//===3   static faunction
+/*
+class User{
+
+  constructor(username,email){
+    this.username=username;
+    this.email=email;
+  }
+    changeemail(newemail){
+      this.email=newemail;
+    }
+    static register(username,email){
+      return new User(username,email);
+    }
+}
+let user = User.register('amir','info@gmail.com');
+user.changeemail('amir@gmail.com');
+console.dir(user);
+
+*/
+
+//===4
+/*
+class User{
+
+  constructor(username,email){
+    this.username=username;
+    this.email=email;
+  }
+    changeemail(newemail){
+      this.email=newemail;
+    }
+    static register(...arg){
+      return new User(...arg);
+    }
+}
+let user = User.register('amir','info@gmail.com');
+user.changeemail('amir@gmail.com');
+console.dir(user);
+*/
+//===5  geter and setter
+
+/*
+class User{
+
+  constructor(username,email){
+    this.username=username;
+    this.email=email;
+  }
+    changeemail(newemail){
+      this.email=newemail;
+    }
+    static register(...arg){
+      return new User(...arg);
+    }
+    get username(){
+      return this.username;
+    }
+    set username(username){
+      return this.username = username;
+    }
+}
+let user = new  User('amir','info@gmail.com');
+
+user.username;
+
+console.dir(user);
+*/
+//===6
+/*
+class User{
+
+  constructor(username,email){
+    this.username=username;
+    this.email=email;
+  }
+    changeemail(newemail){
+      this.email=newemail;
+    }
+    static register(...arg){
+      return new User(...arg);
+    }
+    get username(){
+      return this.username;
+    }
+    set username(username){
+      return this.username = username;
+    }
+}
+let user = new  User('amir','info@gmail.com');
+
+user.username;
+
+console.dir(user);
+*/
+//===7
+/*
+
+        function log(strategy){
+            strategy.handle();
+            }
+
+            log(new class{
+            handle(){
+              //  alert('handled my  alert');
+                console.log('handled my  alert');
+            }
+        });
+
+
+*/
+/*
+export class TaskCollection{
+  constructor(task=[]){
+    this.task= task;
+  }
+  dump(){
+
+  }
+  
+}
+*/
+
+/*
+var thing =new Promise(function(resolve , reject){
+
+  console.log('init promis');
+  setTimeout(() => {
+    console.log('done');
+  }, 2000);
+  reject();
+},);
+
+
+thing.catch((data)=>{
+  console.log('finished');
+});
+
+
+
+*/
+
+//===&&& 
+
+
+
+/*
+
+var thing =new Promise(function(resolve , reject){
+
+  console.log('init promis');
+  setTimeout(() => {
+    console.log('done');
+  }, 2000);
+  resolve();
+},);
+
+
+thing.then(()=>{
+  console.log('finished');
+});
+
+*/
+
+//string========================================================
+/*
+      let title='iran is great!';
+      if(title.indexOf('pp')== 0){
+        console.log('ok');
+      }
+
+*/
+
+
+//startrswith()
+//endswith
+//includes
+//repeat
+/*
+let title ='iran is great !';
+if(title.includes('iran')){
+  console.log('ok');
+}else{
+  console.log('no');
+}
+
+*/
+
+//numeric=========================================================
+//indexOf
+//includes
+//find
+//findIndex
+  /*  console.log(
+      
+    [2,4,6,8,10].findIndex(function(item){
+      return item ===8;
+    })
+
+    );
+*/
+
+//===
+  /*  class User{
+      constructor(name,isAdmin){
+        this.name=name;
+        this.isAdmin=isAdmin;
+      }
+    }
+
+    let  user=[
+      new User('amir',false),
+      new User('ali',true),
+      new User('rima',false),
+    ];
+
+console.log(
+
+  user.find((user) => user.isAdmin).name
+);
+*/
+
+//===array
+//[].fill();
+//[].keys();
+//[].values();
+//[].entries();
+
+
+/*
+let item=[
+'amir',
+'omid',
+'reza',
+'shahriyar'].entries();
+for (const iterator of item) {
+  console.log(iterator);
+}
+
+*/
+//generator===============================================
+/*
+function* numbers(params) {
+  console.log('begin');
+  yield 1;
+  yield 2;
+  yield 3;
+}
+let iterator=numbers();
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+//console.log(numbers()+1);
+
+*/
+
+/*
+function* range(start, end){
+  while(start <= end){
+    yield start;
+    start++;
+  }
+}
+console.log([...range(1,5)]);
+*/
+//================================================
+/*
+let item= new Set(['one','two','three']);
+
+console.log(item);
+
+*/
+/*
+let tags=[
+  'php',
+  'js',
+  'ruby',
+  'js'
+];
+let set =new Set(tags);
+//console.log(set);
+console.log(
+new Set([...set].filter((tags)=>tags.length=== 3))
+
+);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
